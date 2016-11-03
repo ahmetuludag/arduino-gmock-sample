@@ -21,5 +21,7 @@ target_link_libraries(arduino_mock_sample
 
 add_dependencies(arduino_mock_sample arduino_mock)
 
+target_compile_features(arduino_mock_sample PUBLIC cxx_delegating_constructors)
+
 enable_testing()
 add_test(arduino_mock_sample_1 arduino_mock_sample)
