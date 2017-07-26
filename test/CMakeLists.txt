@@ -9,6 +9,8 @@ include_directories(
     ${ARDUINO_MOCK_LIBS_DIR}/lib/gmock/gmock/src/gmock/include
 )
 
+find_package( Threads )
+
 file(GLOB SRC "DigitalReadSerial_unittest.cc")
 add_executable(arduino_mock_sample DigitalReadSerial_unittest.cc)
 
